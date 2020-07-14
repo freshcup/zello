@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
+    <title>Zello</title>
+  </head>
+
+  <body>
+    <div class="ui">
+      <header>
+        <h1>Zello</h1>
+      </header>
+      <div class="button-container">
+        <button id="login" class="active">Login</button>
+        <button id="signup">Create Account</button>
+      </div>
+      <div class="auth-container">
+        <span id="message"></span>
+        <form method="POST">
+          <lable for="email">Email</lable>
+          <input type="email" name="email" id="email" autocorrect="off" autofocus="autofocus" placeholder="email@email.com" />
+          <lable for="password">Password</lable>
+          <input type="password" name="password" id="password"placeholder="" />
+          <button id="submit" type="submit">Sign In</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
