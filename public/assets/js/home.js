@@ -57,6 +57,16 @@ function authenticateUser(email, password) {
   });
 }
 
+function handleSignUpResponse(status){
+  if (status === 'success') {
+    displayMessage('Registered successfully! You may now sign in.', 'success');
+  } else {
+    displayMessage(
+      'Something went wrong. A user with this account may already exist.', 'danger'
+    );
+  }
+}
+
 $setLogin.on('click', setAuth.bind(null, 'login'));
 $setSignUp.on('click', setAuth.bind(null, 'signup'));
 $submitButton.on('click', handleFormSubmit);
