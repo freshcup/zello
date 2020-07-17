@@ -3,7 +3,7 @@ const $boardContainer = $('.container');
 const $boardName = $('header > h1');
 const $createListInput = $('#create-list input');
 const $saveListButton = $('#create-list .save');
-
+const $createCardInput = $('#create-card textarea');
 
 let board;
 
@@ -54,8 +54,8 @@ function createLists(lists) {
 
   let $addListContainer = $('<div class="list add">');
   let $addListButton = $('<button>')
-  .text('+ Add another list')
-  .on('click', openListCreateModal);
+    .text('+ Add another list')
+    .on('click', openListCreateModal);
 
   $addListContainer.append($addListButton);
   $listContainers.push($addListContainer);
@@ -71,8 +71,6 @@ function renderBoard() {
   $boardContainer.empty();
   $boardContainer.append($lists);
 }
-
-$logoutButton.on('click', handleLogout);
 
 function openListCreateModal() {
   $createListInput.val('');
