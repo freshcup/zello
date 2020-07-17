@@ -43,7 +43,8 @@ function createLists(lists) {
     let $listContainer = $('<div class="list">');
     let $header = $('<header>');
     let $headerButton = $('<button>').text(list.title);
-    let $addCardButton = $('<button>Add a card...</button>');
+    let $addCardButton = $('<button>Add a card...</button>').on(
+      'click', openCardCreateModl);
 
     $header.append($headerButton);
     $listContainer.append($header);
@@ -98,6 +99,11 @@ function handleListCreate(event) {
     init();
     MicroModal.close('create-list');
   });
+}
+
+function openCardCreateModal() {
+  $createCardInput.val('');
+  MicroModal.show('create-card');
 }
 
 $saveListButton.on('click', handleListCreate);
