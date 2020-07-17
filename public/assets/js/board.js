@@ -43,8 +43,7 @@ function createLists(lists) {
     let $listContainer = $('<div class="list">');
     let $header = $('<header>');
     let $headerButton = $('<button>').text(list.title);
-    let $addCardButton = $('<button>Add a card...</button>').on(
-      'click', openCardCreateModl);
+    let $addCardButton = $('<button>Add a card...</button>').on('click', openCardCreateModal);
 
     $header.append($headerButton);
     $listContainer.append($header);
