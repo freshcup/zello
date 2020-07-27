@@ -39,6 +39,23 @@ function handleLogout() {
   });
 }
 
+function createCards(cards) {
+  let $cardUl = $('<ul>');
+
+  let $cardLis = cards.map(function(card) {
+    let $cardLi = $('<li>');
+    let $cardButton = $('<button>').text(card.text);
+
+    $cardLi.append($cardButton);
+
+    return $cardLi;
+  });
+
+  $cardUl.append($cardLis);
+
+  return $cardUl;
+}
+
 function createLists(lists) {
   let $listContainers = lists.map(function(list) {
     let $listContainer = $('<div class="list">').data('id', list.id);
@@ -48,6 +65,7 @@ function createLists(lists) {
 
     $header.append($headerButton);
     $listContainer.append($header);
+    $listContainer.append($cardUl);
     $listContainer.append($addCardButton);
 
     return $listContainer;
@@ -117,8 +135,24 @@ function handleCardCreate(event) {
   let listId = $(event.target).data('id');
   let cardText = $createCardInput.val().trim();
 
-  console.log(cardText);
-  console.log(listId);
+  if (!cardText) {
+    MicroModal.close('create-card');
+    return;
+  }
+
+  $.ajax({
+    url: '/api/cards',
+    method: 'POST',
+    data: {
+      list_id: listId,
+      text: cardText
+    }
+  }).then(function() {
+    init();
+    MicroModal.close('create-card');
+  });
+
+  
 }
 
 
