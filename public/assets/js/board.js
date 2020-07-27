@@ -4,6 +4,7 @@ const $boardName = $('header > h1');
 const $createListInput = $('#create-list input');
 const $saveListButton = $('#create-list .save');
 const $createCardInput = $('#create-card textarea');
+const $saveCardButton = $('#create-card .save');
 
 let board;
 
@@ -40,7 +41,7 @@ function handleLogout() {
 
 function createLists(lists) {
   let $listContainers = lists.map(function(list) {
-    let $listContainer = $('<div class="list">');
+    let $listContainer = $('<div class="list">').data('id', list.id);
     let $header = $('<header>');
     let $headerButton = $('<button>').text(list.title);
     let $addCardButton = $('<button>Add a card...</button>').on('click', openCardCreateModal);
@@ -100,10 +101,27 @@ function handleListCreate(event) {
   });
 }
 
-function openCardCreateModal() {
+function openCardCreateModal(event) {
+  let $listContainer = $(event.target).parents('.list');
+  let listId = $listContainer.data('id');
+
+  $saveCardButton.data('id', listId);
+
   $createCardInput.val('');
   MicroModal.show('create-card');
 }
 
+function handleCardCreate(event) {
+  event.preventDefault();
+
+  let listId = $(event.target).data('id');
+  let cardText = $createCardInput.val().trim();
+
+  console.log(cardText);
+  console.log(listId);
+}
+
+
+$saveCardButton.on('click', handleCardCreate);
 $saveListButton.on('click', handleListCreate);
 $logoutButton.on('click', handleLogout);
