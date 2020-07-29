@@ -60,8 +60,15 @@ function createLists(lists) {
   let $listContainers = lists.map(function(list) {
     let $listContainer = $('<div class="list">').data('id', list.id);
     let $header = $('<header>');
-    let $headerButton = $('<button>').text(list.title);
-    let $addCardButton = $('<button>Add a card...</button>').on('click', openCardCreateModal);
+    let $headerButton = $('<button>')
+      .text(list.title)
+      .data(list)
+      .on('click', openListEditModal);
+    let $cardUl = createCards(list.cards);
+    let $addCardButton = $('<button>Add a card...</button>').on(
+      'click',
+      openCardCreateModal
+    );
 
     $header.append($headerButton);
     $listContainer.append($header);
@@ -154,6 +161,12 @@ function handleCardCreate(event) {
 
   
 }
+
+function openListEditModal(event) {
+  let listData = $(event.target).data();
+  console.log(listData);
+}
+
 
 
 $saveCardButton.on('click', handleCardCreate);
