@@ -47,7 +47,10 @@ function createCards(cards) {
 
   let $cardLis = cards.map(function(card) {
     let $cardLi = $('<li>');
-    let $cardButton = $('<button>').text(card.text);
+    let $cardButton = $('<button>')
+      .text(card.text)
+      .data(card)
+      .on('click', openCardEditModal);
 
     $cardLi.append($cardButton);
 
@@ -213,6 +216,11 @@ function handleListDelete(event) {
   });
 }
 
+function openCardEditModal(event) {
+  let cardData = $(event.target).data();
+
+  console.log(cardData);
+}
 
 
 
