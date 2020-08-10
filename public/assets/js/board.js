@@ -232,13 +232,38 @@ function openCardEditModal(event) {
 function handleCardSave(event) {
   event.preventDefault();
 
-  console.log('Save!');
+  let { text, id } = $(event.target).data();
+  let newText = $editCardInput.val().trim();
+
+  if (!newText || newText === text) {
+    MicroModal.close('edit-card');
+    return;
+  }
+
+  $.ajax({
+    url: `/api/cards/${id}`,
+    method: 'PUT',
+    data: {
+      text: newText
+    }
+  }).then(function() {
+    init();
+    MicroModal.close('edit-card');
+  });
 }
 
 function handleCardDelete(event) {
   event.preventDefault();
 
-  console.log('Delete!');
+  let { id } = $(event.target).data();
+
+  $.ajax({
+    url: `/api/cards/${id}`,
+    method: 'DELETE'
+  }).then(function() {
+    init();
+    MicroModal.close('edit-card');
+  });
 }
 
 
