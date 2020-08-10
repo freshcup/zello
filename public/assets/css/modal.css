@@ -44,8 +44,11 @@
 }
 
 .modal__close {
-  background: transparent;
+  background: #ffffff;
   border: 0;
+
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 

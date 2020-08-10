@@ -7,6 +7,7 @@
   <link  href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/modal.css" />
   <link rel="stylesheet" type="text/css" href="/assets/css/board.css" />
+
   <title>Mello</title>
 </head>
   <body>
@@ -43,7 +44,7 @@
             class="modal__close"
             aria-label="Close modal"
             data-micromodal-close
-          ></button>
+          >X</button>
         </header>
         <form method="POST">
           <main class="modal__content" id="create-card-content">
@@ -70,7 +71,7 @@
           <h2 class="modal__title" id="create-list-title">
             New list title
           </h2>   <button class="modal__close" aria-label="Close modal"
-            data-micromodal-close></button>
+            data-micromodal-close>X</button>
         </header>
         <form method="POST">
           <main class="modal__content" id="create-list-content">
@@ -101,7 +102,7 @@
           class="modal__close"
           aria-label="Close modal"
           data-micromodal-close
-        ></button>
+        >X</button>
       </header>
       <form method="POST">
         <main class="modal__content" id="edit-list-content">
@@ -134,10 +135,7 @@
           Edit card
         </h2>
         <button
-          class="modal__close"
-          aria-label="Close modal"
-          data-micromodal-close
-        ></button>
+          class="modal__close" aria-label="Close modal" data-micromodal-close>X</button>
       </header>
       <form method="POST">
         <main class="modal__content" id="edit-card-content">
@@ -152,6 +150,48 @@
           </button>
         </footer>
       </form>
+    </div>
+  </div>
+</div>
+
+<!-- Contribute Modal -->
+<div class="modal micromodal-slide" id="contribute" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div
+      class="modal__container"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contributors-title"
+    >
+      <header class="modal__header">
+        <h2 class="modal__title" id="contributors-title">
+          Add a Contributor
+        </h2>
+        <button
+          class="modal__close"
+          aria-label="Close modal"
+          data-micromodal-close
+        >X</button>
+      </header>
+      <main class="modal__content" id="contributors-content">
+        <p class="message hidden"></p>
+        <form method="POST">
+          <div class="form-group">
+            <label for="contributor-email">New contributor email:</label>
+            <input
+              name="contributor-email"
+              id="contributor-email"
+              placeholder="zello@zello.com"
+              type="text"
+            />
+            <button type="submit" class="modal__btn modal__btn-primary save">
+              Add
+            </button>
+          </div>
+        </form>
+        <h3>Contributors</h3>
+        <ul></ul>
+      </main>
     </div>
   </div>
 </div>
