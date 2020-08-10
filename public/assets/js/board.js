@@ -8,6 +8,9 @@ const $saveCardButton = $('#create-card .save');
 const $editListInput = $('#edit-list input');
 const $editListSaveButton = $('#edit-list .save');
 const $editListDeleteButton = $('#edit-list .delete');
+const $editCardInput = $('#edit-card textarea');
+const $editCardSaveButton = $('#edit-card .save');
+const $editCardDeleteButton = $('#edit-card .delete');
 
 let board;
 
@@ -219,13 +222,32 @@ function handleListDelete(event) {
 function openCardEditModal(event) {
   let cardData = $(event.target).data();
 
+  $editCardInput.val(cardData.text);
+  $editCardSaveButton.data(cardData);
+  $editCardDeleteButton.data(cardData);
+  MicroModal.show('edit-card');
   console.log(cardData);
 }
 
+function handleCardSave(event) {
+  event.preventDefault();
+
+  console.log('Save!');
+}
+
+function handleCardDelete(event) {
+  event.preventDefault();
+
+  console.log('Delete!');
+}
 
 
 $saveCardButton.on('click', handleCardCreate);
 $saveListButton.on('click', handleListCreate);
 $logoutButton.on('click', handleLogout);
+
 $editListSaveButton.on('click', handleListEdit);
 $editListDeleteButton.on('click', handleListDelete);
+
+$editCardSaveButton.on('click', handleCardSave);
+$editCardDeleteButton.on('click', handleCardDelete);
