@@ -105,6 +105,16 @@ function renderBoard() {
 
   $boardContainer.empty();
   $boardContainer.append($lists);
+
+  makeSortable();
+}
+
+function makeSortable() {
+  Sortable.create($boardContainer[0], {
+    animation: 150,
+    ghostClass: 'ghost',
+    easing: 'cubic-bezier(0.785, 0.135, 0.15, 0.86)'
+  });
 }
 
 function openListCreateModal() {
