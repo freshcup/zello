@@ -38,6 +38,7 @@ nav {
   height: 60px;
 }
 
+
 nav a,
 nav a:visited,
 nav button {
@@ -46,6 +47,10 @@ nav button {
   background-color: unset;
   cursor: pointer;
   user-select: none;
+}
+
+nav button:hover {
+  color: #4bcaea;
 }
 
 nav a:focus,

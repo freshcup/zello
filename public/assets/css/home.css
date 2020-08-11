@@ -137,9 +137,26 @@ button {
   background-color: inherit;
 }
 
-.brand2 {
-  color: #4bcaea !important;
+
+.brand2 h2 {
+  
+  color: #0071bc !important;
   font-family: 'Sedgwick Ave', cursive !important;
-  font-size: 30px;
+  font-size: 60px;
+ 
+  text-align: center;
 } 
 
+.brand2 h2:hover {
+  color: #4bcaea !important;
+ 
+} 
+
+.description {
+  margin: 0 auto;
+  text-align: left; 
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 1.0em;
+  max-width: 430px;
+}

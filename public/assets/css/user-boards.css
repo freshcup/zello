@@ -29,6 +29,10 @@ nav {
   color: white;
 }
 
+nav button:hover {
+  color: #4bcaea;
+}
+
 nav a,
 nav a:visited,
 nav button {
