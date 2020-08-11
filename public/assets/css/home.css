@@ -136,3 +136,10 @@ button {
   -webkit-appearance: none;
   background-color: inherit;
 }
+
+.brand2 {
+  color: #4bcaea !important;
+  font-family: 'Sedgwick Ave', cursive !important;
+  font-size: 30px;
+} 
+
