@@ -116,7 +116,12 @@ function renderBoard() {
 
 function renderContributors() {
   let $contributorListItems = board.users.map(function(user) {
-    let $contributorListItem = $('<li>').text(user.email);
+    let $contributorListItem = $('<li>');
+    let $contributorSpan = $('<span>').text(user.email);
+    let $contributorDeleteButton = $('<button class="danger">Remove</button>');
+
+    $contributorListItem.append($contributorSpan, $contributorDeleteButton);
+
     return $contributorListItem;
   });
 
