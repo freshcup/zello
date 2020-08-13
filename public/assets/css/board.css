@@ -190,6 +190,55 @@ button {
   background-color: inherit;
 }
 
+
+#logout { 
+  background: #0079bf;
+  height: 50px;
+  min-width: 100px;
+  border: none;
+  border-radius: 3px;
+  color: #eee;
+  font-size: 20px;
+  font-family: 'Sedgwick Ave', cursive !important;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+#logout:hover {
+  background: #4bcaea;
+}
+
+#contributors { 
+  background: #0079bf;
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  border-radius: 3px;
+  color: #eee;
+  font-size: 20px;
+  font-family: 'Sedgwick Ave', cursive !important;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 25px;
+}
+
+#contributors:hover {
+  background: #4bcaea;
+}
+
+
+
 .hidden {
   visibility: hidden;
 }
