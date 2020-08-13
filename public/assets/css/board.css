@@ -192,9 +192,8 @@ button {
 
 
 #logout { 
-  background: #0079bf;
+  background: #075b8f;
   height: 50px;
-  min-width: 100px;
   border: none;
   border-radius: 3px;
   color: #eee;
@@ -208,16 +207,39 @@ button {
   justify-content: center;
   cursor: pointer;
   padding-top: 5px;
+  padding: 5px 10px 0px 10px;
 }
 
 #logout:hover {
   background: #4bcaea;
 }
 
+#boards { 
+  background: #0079bf;
+  height: 50px;
+   border: none;
+  border-radius: 3px;
+  color: #eee;
+  font-size: 20px;
+  font-family: 'Sedgwick Ave', cursive !important;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 5px 10px 0px 10px;
+}
+
+#boards:hover {
+  background: #4bcaea;
+}
+
 #contributors { 
   background: #0079bf;
   height: 50px;
-  min-width: 150px;
   border: none;
   border-radius: 3px;
   color: #eee;
@@ -230,7 +252,10 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding-top: 25px;
+  margin-top: 15px;
+  padding: 5px 10px 0px 10px;
+  
+ 
 }
 
 #contributors:hover {

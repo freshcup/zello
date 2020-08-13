@@ -163,7 +163,7 @@ a.board-tile:hover {
 
 .brand {
   color: #4bcaea !important;
-  font-family: 'Sedgwick Ave', cursive !important;
+  font-family: 'Cookie', cursive !important;
   font-size: 30px;
 } 
 
@@ -171,3 +171,26 @@ a.board-tile:hover {
   color: #ffffff !important;
  
 } 
+
+#logout { 
+  background: #075b8f;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  color: #eee;
+  font-size: 20px;
+  font-family: 'Sedgwick Ave', cursive !important;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+  padding: 5px 10px 0px 10px;
+}
+
+#logout:hover {
+  background: #4bcaea;
+}
