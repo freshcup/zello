@@ -200,7 +200,7 @@ button {
   font-size: 20px;
   font-family: 'Sedgwick Ave', cursive !important;
   position: relative;
-  transition: 1s;
+  transition: 1.3s;
   -webkit-tap-highlight-color: transparent;
   display: flex;
   align-items: center;
@@ -212,18 +212,17 @@ button {
 
 #logout:hover {
   background: #4bcaea;
+  color: #111111;
 }
 
+
 #boards { 
-  background: #0079bf;
-  height: 50px;
-   border: none;
-  border-radius: 3px;
   color: #eee;
+  height: 50px;
   font-size: 20px;
   font-family: 'Sedgwick Ave', cursive !important;
   position: relative;
-  transition: 1s;
+  transition: 1.3s;
   -webkit-tap-highlight-color: transparent;
   display: flex;
   align-items: center;
@@ -234,19 +233,19 @@ button {
 }
 
 #boards:hover {
+  color: #111111;
   background: #4bcaea;
+  border: none;
+  border-radius: 3px;
 }
 
 #contributors { 
-  background: #0079bf;
-  height: 50px;
-  border: none;
-  border-radius: 3px;
   color: #eee;
+  height: 50px;
   font-size: 20px;
   font-family: 'Sedgwick Ave', cursive !important;
   position: relative;
-  transition: 1s;
+  transition: 1.3s;
   -webkit-tap-highlight-color: transparent;
   display: flex;
   align-items: center;
@@ -254,12 +253,13 @@ button {
   cursor: pointer;
   margin-top: 15px;
   padding: 5px 10px 0px 10px;
-  
- 
 }
 
 #contributors:hover {
+  color: #111111;
   background: #4bcaea;
+  border: none;
+  border-radius: 3px;
 }
 
 
@@ -273,9 +273,11 @@ button {
   color: #4bcaea !important;
   font-family: 'Sedgwick Ave', cursive !important;
   font-size: 30px;
+  transition: 1.3s;
+  -webkit-tap-highlight-color: transparent;
+
 } 
 
 .brand:hover {
   color: #ffffff !important;
- 
-} 
+ } 
